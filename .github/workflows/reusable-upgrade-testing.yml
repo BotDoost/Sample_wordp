@@ -57,6 +57,8 @@ jobs:
         image: ${{ inputs.db-type }}:${{ inputs.db-version }}
         ports:
           - 3306
+        volumes:
+          - ${{ contains( fromJSON('["7.2", "7.3"]'), matrix.php ) && './tools/local-env/mysql-old-php.conf:/etc/mysql/conf.d/config-file.cnf' || './tools/local-env/mysql-init.sql:/docker-entrypoint-initdb.d/mysql-init.sql' }}
         options: >-
           --health-cmd="mysqladmin ping"
           --health-interval="30s"
