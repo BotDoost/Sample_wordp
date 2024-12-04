@@ -75,11 +75,6 @@ jobs:
         wp: [ '6.0', '6.1', '6.2', '6.3', '6.4', '6.5', '6.6', '6.7' ]
         multisite: [ false, true ]
 
-        exclude:
-          - php: '7.2'
-            db-version: '8.4'
-          - php: '7.3'
-            db-version: '8.4'
     with:
       os: ${{ matrix.os }}
       php: ${{ matrix.php }}
@@ -104,11 +99,6 @@ jobs:
         wp: [ '5.0', '5.1', '5.2', '5.3', '5.4', '5.5', '5.6', '5.7', '5.8', '5.9' ]
         multisite: [ false, true ]
 
-        exclude:
-          - php: '7.2'
-            db-version: '8.4'
-          - php: '7.3'
-            db-version: '8.4'
     with:
       os: ${{ matrix.os }}
       php: ${{ matrix.php }}
@@ -160,11 +150,6 @@ jobs:
         wp: [ '4.1', '4.2', '4.3', '4.4', '4.5', '4.6', '4.7', '4.8', '4.9' ]
         multisite: [ false, true ]
 
-        exclude:
-          - php: '7.2'
-            db-version: '8.4'
-          - php: '7.3'
-            db-version: '8.4'
     with:
       os: ${{ matrix.os }}
       php: ${{ matrix.php }}
