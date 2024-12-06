@@ -3,3 +3,8 @@ services:
   mysql:
     volumes:
       - ./tools/local-env/mysql-old-php.conf:/etc/mysql/conf.d/config-file.cnf
+
+  # This is currently only used in the upgrade and installation test GitHub Action workflows.
+  database:
+    volumes:
+      - ./tools/local-env/mysql-old-php.conf:/etc/mysql/conf.d/config-file.cnf
